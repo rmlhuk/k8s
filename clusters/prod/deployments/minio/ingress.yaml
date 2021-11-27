@@ -20,7 +20,7 @@ spec:
                   number: 9000
             path: /
             pathType: ImplementationSpecific
-    - host: s3-console.k8s.rmlh.uk
+    - host: console.s3.k8s.rmlh.uk
       http:
         paths:
           - backend:
@@ -30,8 +30,18 @@ spec:
                   number: 9001
             path: /
             pathType: ImplementationSpecific
+    - host: "*.s3.k8s.rmlh.uk"
+      http:
+        paths:
+          - backend:
+              service:
+                name: minio-service
+                port:
+                  number: 9000
+            path: /
+            pathType: ImplementationSpecific
   tls:
     - hosts:
         - s3.k8s.rmlh.uk
-        - s3-console.k8s.rmlh.uk
+        - "*.s3.k8s.rmlh.uk"
       secretName: minio-tls
