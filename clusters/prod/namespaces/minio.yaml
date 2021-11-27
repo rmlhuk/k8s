@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: minio
+  name: minio1
   labels:
     field.cattle.io/projectId: p-7cj85
   annotations:
