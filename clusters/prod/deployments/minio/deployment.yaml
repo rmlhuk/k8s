@@ -22,9 +22,9 @@ spec:
             - /storage
           env:
             - name: MINIO_DOMAIN
-              value: s3.lab.rmlh.uk
+              value: s3.k8s.rmlh.uk
             - name: MINIO_BROWSER_REDIRECT_URL
-              value: https://s3-console.lab.rmlh.uk/
+              value: https://s3-console.k8s.rmlh.uk/
             - name: MINIO_ROOT_USER
               valueFrom:
                 secretKeyRef:
